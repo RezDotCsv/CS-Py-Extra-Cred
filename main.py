@@ -61,6 +61,7 @@ class Students:
         self._major = major
         self._advisor = advisor
         self._classesTaken = classesTaken
+        self._classesTaking = []
     
    
     
@@ -100,7 +101,7 @@ class Students:
         self._advisor = advisor
         
     @classes.setter
-    def classes(self, classes):
+    def classes(self, classes : Classes):
         if(classes.reiqurimentsMet):
             self._classes.append(classes)
         else:
@@ -123,12 +124,13 @@ class Professors:
         self._advise = advise
     @property
     def advise(self):
-        if(Students.advisor != advise):
-            self._advise = Students.advisor.getter 
+        return self._advise
     @property
     def name(self):
         return self._human.name
-
+    @property
+    def teaches(self):
+        return self._teaches
 
 
 
@@ -139,7 +141,8 @@ class Professors:
 #Classes class 
 class Classes:
 
-    def __init__(self, requirments):
+    def __init__(self, name, requirments):
+        self._name = name
         self._requriments = requirments
         
         
@@ -151,6 +154,9 @@ class Classes:
                 return False
         return True
 
+    @property
+    def name(self):
+        return self._name
     @property
     def requirments(self):
         return self._requriments
