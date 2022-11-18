@@ -78,6 +78,9 @@ class Students:
     def advisor(self):
         return self._advisor
     @property
+    def name(self):
+        return self.human.name
+    @property
     def major(self):
         return self._major
     @property
@@ -106,26 +109,40 @@ class Students:
             
   
 
+
+
         
                      
 #Prof class
 class Professors:
 
 
-    def __init__(self, Human, teaches, advise):
+    def __init__(self, human : Human, teaches, advise):
+        self._human = human
         self._teaches = teaches
         self._advise = advise
-@property
-def advise(self):
-    if(Students.advisor.getter != advise):
-     self._advise = Students.advisor.getter 
+    @property
+    def advise(self):
+        if(Students.advisor != advise):
+            self._advise = Students.advisor.getter 
+    @property
+    def name(self):
+        return self._human.name
+
+
+
+
+
+
+
 
 #Classes class 
 class Classes:
 
-    def __init__(self, Professors, requirments):
+    def __init__(self, requirments):
         self._requriments = requirments
-        self._taughtBy = Professors
+        
+        
 
     @classmethod
     def requirmentsMet(self):
@@ -137,6 +154,17 @@ class Classes:
     @property
     def requirments(self):
         return self._requriments
+    @property
+    def professor(self):
+        return self.professor
+    @professor.setter
+    def professor(self, name):
+        return self.professor.append(name)
+    
+    @property
+    def removeProfessor(self, name):
+       return self.professor.remove(name)
+
 
 
 

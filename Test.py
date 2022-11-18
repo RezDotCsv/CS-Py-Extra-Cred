@@ -35,17 +35,24 @@ class Test:
             ValueError('ID already exists please try a diffrent ID')
             print("Test Human 2 passed")
             Human.listOfHumans =[]
-            
-       
+    def testCaseProfessor():
+        cS = Classes( '')
+        p1 = Human("Jemmy Raz", 12435, '')
+        
+        prof1 =Professors(p1, cS, "" )
+        assert (prof1.name) == "Jemmy Raz", "Naming is passedown"
+        print("testCaseProfessor passed") 
     def testCaseStudent1():
         p1 = Human("Jemmy Raz", 12435, '')
         s1 = Students(p1, "Clowning", "Rocko Le Rock", '')
-        assert (s1.human.name) == "Jemmy Raz", "Naming is passeddown"
+        assert (s1.name) == "Jemmy Raz", "Naming is passedown"
+
+    
 
         
     if __name__ == "__main__":
         testCaseHuman1()
-        
+        testCaseProfessor()
         testCaseHuman2()
         testCaseStudent1()
 
