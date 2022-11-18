@@ -1,5 +1,5 @@
 
-All cless are made in the main file.
+All classes are made in the main file.
 Test.py functions as a testing ground to experiment with the functionality of 
 the classes as well
 Classes will all for the creation of Students, Professors, Majors, Classess, and Courses.
