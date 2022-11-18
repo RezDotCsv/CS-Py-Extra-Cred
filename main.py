@@ -178,8 +178,9 @@ class Course:
 
 #majors class
 class Majors:
-    def __init__(self) -> None:
-        pass
+    def __init__(self,reqs: list [Classes]):
+        self._reqs = reqs
+
         
 
 
