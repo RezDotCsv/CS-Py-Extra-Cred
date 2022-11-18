@@ -26,7 +26,7 @@ class Test:
     #Test attempting to input someone with an ID already exists    
     def testCaseHuman2():
         Human.listOfHumans =[]
-        print (Human.listOfHumans)
+        
         person1= Human("Josh Fambler", 1245678, '')
         try:
             person2= Human("Josh Faler", 1245678, '')
