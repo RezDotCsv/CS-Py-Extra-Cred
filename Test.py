@@ -36,7 +36,7 @@ class Test:
             print("Test Human 2 passed")
             Human.listOfHumans =[]
     def testCaseProfessor():
-        cS = Classes( '')
+        cS = Classes("Cs 220", "")
         p1 = Human("Jemmy Raz", 12435, '')
         
         prof1 =Professors(p1, cS, "" )
