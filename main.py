@@ -12,17 +12,25 @@
 
 #Base class for both students and professors to deal with all the naming stuff
 class Human:
+    listOfHumans = []
+    
     #The default for when a person has no prefered name
-    def  __init__(self, legalName, id, prefName):
-       
+    def  __init__(self, legalName, id: int, prefName):
+        
+        if(id in self.listOfHumans):
+            raise ValueError('ID already exists please try a diffrent ID')
+        self.listOfHumans.append(id)
         self._legalName = legalName
         self._prefName = prefName
         self._Id = id
-     
-   
-    #The clase for when a student has a prefered name added to another init so make it easier
+        
     
-
+    
+  
+    @property
+    def id(self):
+        return self._Id
+    
     @property
     def name(self):
         if(self._prefName == ""):
@@ -48,39 +56,24 @@ class Human:
 class Students:
     
     #Perfect case where all info is known
-    def __init__(self, Human, Classes, major, advisor, classesTaken):
-        self._classes = Classes
+    def __init__(self, human : Human, major, advisor, classesTaken):
+        self._human = human
         self._major = major
         self._advisor = advisor
         self._classesTaken = classesTaken
     
-    #itterations on less info
-    def __init__(self, Human, Classes, major, advisor):
-        self._classes = Classes
-        self._major = major
-        self._advisor = advisor
-        self._classesTaken = []
-    def __init__(self, Human, Classes, major):
-        self._classes = Classes
-        self._major = major
-    def __init__(self, Human, Classes):
-        self._classes = Classes
-        self._major = ""
-
-    #bare minimum
-    def __init__(self, Human):
-        self._classes = []
-        self._major = "Undeclared major"
-        self._advisor = "No advisor assigned"
+   
     
     @classmethod
     def hasTaken(self):
         return self._classesTaken
     def completedTerm(self):
         self._classesTaken.append(self._classes)
-        self.classes.deleter
+        self.classes = []
     
-    
+    @property
+    def human(self):
+        return self._human
     @property
     def advisor(self):
         return self._advisor
