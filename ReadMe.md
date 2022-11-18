@@ -12,12 +12,12 @@ thanks to the @property I am able to pass up information from the
 subclasses and retain the same naming convention to help with readability on the user end
 
 
-| Class         | Methods       | Output         | Raw                |
-| ------------- |:-------------:| --------------:|-------------------:|
-| Human         |.name          |"Name"          |_human.name         |
-| Students      |.name          | "Name"         |student._human.name |
-| Professors    |.name          | "Name"         |student._human.name |
-| Classes       |.name          | "Name"         |classes._name       |
+| Class         | Methods       | Output         | Raw                    |
+| ------------- |:-------------:| --------------:|-----------------------:|
+| Human         |.name          |"Name"          |_human.name             |
+| Students      |.name          | "Name"         |student._human.nam    e |
+| Professors    |.name          | "Name"         |Professors._human.name |
+| Classes       |.name          | "Name"         |classes._name          |
 
 Note the last one is not human and is not using the human subclass, however it is still using the same conventions for simplicity
 
