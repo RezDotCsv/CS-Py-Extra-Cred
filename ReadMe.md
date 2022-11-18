@@ -14,7 +14,7 @@ subclasses and retain the same naming convention to help with readability on the
 
 | Class         | Methods       | Output         | Raw                |
 | ------------- |:-------------:| --------------:|-------------------:|
-| Human         |.name          |"Name"          |_human.nam          |
+| Human         |.name          |"Name"          |_human.name         |
 | Students      |.name          | "Name"         |student._human.name |
 | Professors    |.name          | "Name"         |student._human.name |
 | Classes       |.name          | "Name"         |classes._name       |
